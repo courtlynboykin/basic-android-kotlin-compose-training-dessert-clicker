@@ -40,10 +40,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -60,7 +60,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.core.content.ContextCompat
 import com.example.dessertclicker.ui.DessertClickerViewModel
 import com.example.dessertclicker.ui.theme.DessertClickerTheme
-import kotlin.reflect.KSuspendFunction0
 
 
 // Tag for logging
@@ -80,7 +79,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     DessertClickerApp(
                         dessertViewModel = viewModel,
-                    onDessertButtonClicked = viewModel::updateAppState)
+                        onDessertButtonClicked = viewModel::updateAppState
+                    )
                 }
             }
         }
